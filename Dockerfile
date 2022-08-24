@@ -1,6 +1,6 @@
 FROM v2fly/v2fly-core:latest
 
-# RUN apk add caddy
+RUN apk add caddy
 RUN apk add nginx
 RUN apk add gettext
 RUN apk add curl
