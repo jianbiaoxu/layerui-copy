@@ -6,7 +6,7 @@ RUN apk add gettext
 RUN apk add curl
 RUN apk add jq
 
-COPY html /root/html/
+COPY layui_doc /root/html/
 
 COPY config.json.tp /root/
 COPY nginx.template.conf /root/
