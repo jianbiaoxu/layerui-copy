@@ -9,7 +9,7 @@
             "description": "app UUID",
             "value": "9dbf615a-d05b-45d6-a910-18cdbd3b71f7"
         },
-        "UUID": {
+        "PATH": {
             "description": "search path",
             "value": "search"
         }
