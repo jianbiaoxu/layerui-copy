@@ -1,65 +1,30 @@
 {
-    "policy": {
-        "levels": {
-            "0": {
-                "handshake": 5,
-                "connIdle": 300,
-                "uplinkOnly": 2,
-                "downlinkOnly": 5,
-                "statsUserUplink": false,
-                "statsUserDownlink": false,
-                "bufferSize": 10240
-            }
-        },
-        "system": {
-            "statsInboundUplink": false,
-            "statsInboundDownlink": false,
-            "statsOutboundUplink": false,
-            "statsOutboundDownlink": false
-        }
+    "log": {
+        "loglevel": "warning"
     },
     "inbounds": [
         {
-            "port": 8080,
+            "port": 18080,
+            "listen": "127.0.0.1",
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
-                        "id": "$UUID",
-                        "level": 0
+                        "id": "$UUID", // 填写你的 UUID
+                        "level": 0,
+                        "email": ""
                     }
                 ],
                 "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "none"
+                "security": "none",
+                "wsSettings": {
+                    "path": "$PATH" // 必须换成自定义的 PATH，需要和上面的一致
+                }
             }
         }
-        // {
-        //     "port": 8082,
-        //     "listen": "127.0.0.1",
-        //     "protocol": "vless",
-        //     "settings": {
-        //         "clients": [
-        //             {
-        //                 "id": "$UUID",
-        //                 "level": 0
-        //             }
-        //         ],
-        //         "decryption": "none"
-        //     },
-        //     "streamSettings": {
-        //         "security": "none",
-        //         "network": "h2",
-        //         "httpSettings": {
-        //             "path": "/h2",
-        //             "host": [
-        //                 "**.herokuapp.com"
-        //             ]
-        //         }
-        //     }
-        // }
     ],
     "outbounds": [
         {
