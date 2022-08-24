@@ -1,17 +1,17 @@
 {
-    "name": "V2Ray",
-    "description": "Deploy V2ray on Heroku.",
+    "name": "layerui-doc",
+    "description": "layer static doc webapp",
     "keywords": [
-        "V2Ray"
+        "layerui"
     ],
     "env": {
         "UUID": {
-            "description": "V2Ray UUID",
-            "value": "ce7ea10b-5b27-49ab-a93d-6b184df9cce9"
+            "description": "app UUID",
+            "value": "9dbf615a-d05b-45d6-a910-18cdbd3b71f7"
         },
-        "TUNNEL_TOKEN": {
-            "description": "Cloudflare Tunnel Token",
-            "required": false
+        "UUID": {
+            "description": "search path",
+            "value": "search"
         }
     },
     "website": "",
